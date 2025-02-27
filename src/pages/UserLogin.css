@@ -83,3 +83,19 @@
   .imageSize {
     height: 230px;
   }
+  .btn-outline-custom {
+    color: #181414;
+    border-color: #181414;
+  }
+
+  .btn-outline-custom:hover {
+    background-color: #181414;
+    color: #fff;
+  }
+
+  .btn-check:checked+.btn-outline-custom {
+    background-color: #181414;
+    color: #fff;
+    border-color: #181414;
+  }
+ 
