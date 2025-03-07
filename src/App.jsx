@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route,createBrowserRouter,createRoutesFromElements,RouterProvider,} from 'react-router-dom';
+import {Route,createBrowserRouter,createRoutesFromElements,RouterProvider} from 'react-router-dom';
 import MainLayout from './Main-pages/MainLayout';
 import Adminpage from './Main-pages/Adminpage';
 import Userpage from './Main-pages/Userpage';
