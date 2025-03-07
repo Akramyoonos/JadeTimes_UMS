@@ -3,12 +3,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../css/boostrap.css";
 import "../css/main.css";
-import "../pages/UserLogin.css";
-import Usersidebar from "./Usersidebar";
-
+import Usersidebar from '../User/Usersidebar.jsx';
+import UserAppHeader from "../User/UserAppHeader.jsx";
 
 const UserLeaves = () => {
   return (
+    <> 
+    <Usersidebar/>
+    <UserAppHeader/>
     
 <main className="backgroundColorChange">
 
@@ -36,7 +38,7 @@ const UserLeaves = () => {
         <ol className="breadcrumb d-none d-lg-flex align-items-center">
           <li className="breadcrumb-item">
             <i className="bi bi-house text-dark"></i>
-            <a href="userDashBoard.php">Home</a>
+            <a href="/UserDashBoard">Home</a>
           </li>
           <li className="breadcrumb-item" aria-current="page">Leaves</li>
         </ol>
@@ -190,7 +192,7 @@ const UserLeaves = () => {
 </div>
 
 </main>
-
+</>
   )
 }
 

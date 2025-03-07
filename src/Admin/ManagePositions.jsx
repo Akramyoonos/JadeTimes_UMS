@@ -2,11 +2,16 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import '../css/main.css';
-import '../pages/AdminLogin.css'
+import '../Login-pages/AdminLogin.css';
 import "../Admin/adminSideBar";
+import AdminSideBar from '../Admin/adminSideBar';
+import AdminAppHeader from './AdminAppHeader';
 
 const ManagePositions = () => {
   return (
+    <>  
+    <AdminSideBar/>
+    <AdminAppHeader/>
     <main class="backgroundColorChange">
     <div class="page-wrapper">
         <div class="main-container">
@@ -15,7 +20,7 @@ const ManagePositions = () => {
                     <ol class="breadcrumb d-none d-lg-flex align-items-center">
                         <li class="breadcrumb-item">
                             <i class="bi bi-house text-dark"></i>
-                            <a href="adminPanel.php">Home</a>
+                            <a href="/AdminPanel">Home</a>
                         </li>
                         <li class="breadcrumb-item">Manage departments and positions</li>
                     </ol>
@@ -161,6 +166,7 @@ const ManagePositions = () => {
     </div>
 
 </main>
+ </>
   )
 }
 

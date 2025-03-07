@@ -2,7 +2,7 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import '../css/main.css';
-import '../pages/AdminLogin.css'
+import '../Login-pages/AdminLogin.css';
 import "../Admin/adminSideBar";
 
 const SingleLeaveVIew = () => {

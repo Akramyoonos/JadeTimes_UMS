@@ -1,64 +1,67 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import AdminSideBar from './adminSideBar';
+import AdminAppHeader from './AdminAppHeader';
 
 const ManageStaff = () => {
   return (
-    <main class="backgroundColorChange" onload="loadStaffDateToFront(0)">
-    <div class="page-wrapper">
-        <div class="main-container">
-            <div class="app-container">
-                <div class="app-hero-header d-flex align-items-start">
-                    <ol class="breadcrumb d-none d-lg-flex align-items-center">
-                        <li class="breadcrumb-item">
-                            <i class="bi bi-house text-dark"></i>
-                            <a href="adminPanel.php">Home</a>
+    <>
+    <AdminSideBar />
+    <AdminAppHeader />
+    <main className="backgroundColorChange" onload="loadStaffDateToFront(0)">
+    <div className="page-wrapper">
+        <div className="main-container">
+            <div className="app-container">
+                <div className="app-hero-header d-flex align-items-start">
+                    <ol className="breadcrumb d-none d-lg-flex align-items-center">
+                        <li className="breadcrumb-item">
+                            <i className="bi bi-house text-dark"></i>
+                            <a href="/AdminPanel">Home</a>
                         </li>
-                        <li class="breadcrumb-item">Manage Staff</li>
+                        <li className="breadcrumb-item">Manage Staff</li>
                     </ol>
                 </div>
 
-                <div class="app-body" id="cbody">
-                    <div class="row mb-5">
-                        <div class="col-12">
-                            <p class="d-inline-flex gap-1">
-                                <button class="btn btn-dark backgroundColorChange removeCorner" type="button" 
+                <div className="app-body" id="cbody">
+                    <div className="row mb-5">
+                        <div className="col-12">
+                            <p className="d-inline-flex gap-1">
+                                <button className="btn btn-dark backgroundColorChange removeCorner" type="button" 
                                         data-bs-toggle="collapse" data-bs-target="#collapseExample" 
                                         aria-expanded="false" aria-controls="collapseExample">
-                                    <i class="bi bi-person-plus"></i> Add New Staff Member
+                                    <i className="bi bi-person-plus"></i> Add New Staff Member
                                 </button>
                             </p>
-                            <div class="collapse" id="collapseExample">
-                                <div class="card card-body">
-                                    <div class="row">
-                                        <div class="col-xxl-12">
-                                            <div class="card mb-4">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-sm-6 col-12">
-                                                            <div class="mb-3">
-                                                                <label class="form-label">Select User</label>
-                                                                <select class="form-select removeCorner" id="adduser">
+                            <div className="collapse" id="collapseExample">
+                                <div className="card card-body">
+                                    <div className="row">
+                                        <div className="col-xxl-12">
+                                            <div className="card mb-4">
+                                                <div className="card-body">
+                                                    <div className="row">
+                                                        <div className="col-lg-6 col-sm-6 col-12">
+                                                            <div className="mb-3">
+                                                                <label className="form-label">Select User</label>
+                                                                <select className="form-select removeCorner" id="adduser">
                                                                     <option value="0">Select user</option>
                                                                    
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-sm-6 col-12">
-                                                            <div class="mb-3">
-                                                                <label class="form-label">Registered Date</label>
+                                                        <div className="col-lg-6 col-sm-6 col-12">
+                                                            <div className="mb-3">
+                                                                <label className="form-label">Registered Date</label>
                                                                 <input type="date" id="dor" 
-                                                                       class="form-control removeCorner" 
+                                                                       className="form-control removeCorner" 
                                                                        placeholder="Registration Date"/>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 mt-4">
-                                                    <button type="button" onclick="registerNewStaff()" 
-                                                            class="btn btn-dark removeCorner backgroundColorChange w-50">
+                                                <div className="col-12 mt-4">
+                                                    <button type="button"  
+                                                            className="btn btn-dark removeCorner backgroundColorChange w-50">
                                                         Register New Staff Member
                                                     </button>
                                                 </div>
@@ -71,11 +74,11 @@ const ManageStaff = () => {
                     </div>
 
                   
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-4 col-12 text-center">
-                            <div class="mb-3">
+                    <div className="row">
+                        <div className="col-lg-3 col-sm-4 col-12 text-center">
+                            <div className="mb-3">
                                 <input type="text" id="searchname" 
-                                       class="form-control removeCorner smallText" 
+                                       className="form-control removeCorner smallText" 
                                        placeholder="Search by name" 
                                        oninput="loadStaffDateToFront(1)"/>
                             </div>
@@ -84,12 +87,12 @@ const ManageStaff = () => {
                     </div>
 
                    
-                    <div class="row">
-                        <div class="col-xxl-12">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table align-middle table-hover m-0">
+                    <div className="row">
+                        <div className="col-xxl-12">
+                            <div className="card mb-4">
+                                <div className="card-body">
+                                    <div className="table-responsive">
+                                        <table className="table align-middle table-hover m-0">
                                             <thead>
                                                 <tr>
                                                     <th>NO</th>
@@ -113,14 +116,14 @@ const ManageStaff = () => {
                     </div>
 
                   
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-12">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <h5 class="card-title">Pending Payments</h5>
+                    <div className="row">
+                        <div className="col-xl-5 col-lg-12">
+                            <div className="card mb-4">
+                                <div className="card-header">
+                                    <h5 className="card-title">Pending Payments</h5>
                                 </div>
-                                <div class="card-body">
-                                    <table class="table align-middle">
+                                <div className="card-body">
+                                    <table className="table align-middle">
                                         <thead>
                                             <tr>
                                                 <th>User</th>
@@ -134,13 +137,13 @@ const ManageStaff = () => {
                             </div>
                         </div>
 
-                        <div class="col-xl-7 col-lg-12">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <h5 class="card-title">Payment History</h5>
+                        <div className="col-xl-7 col-lg-12">
+                            <div className="card mb-4">
+                                <div className="card-header">
+                                    <h5 className="card-title">Payment History</h5>
                                 </div>
-                                <div class="card-body">
-                                    <table class="table align-middle">
+                                <div className="card-body">
+                                    <table className="table align-middle">
                                         <thead>
                                             <tr>
                                                 <th>JID</th>
@@ -157,7 +160,7 @@ const ManageStaff = () => {
                     </div>
                 </div>
 
-                <div class="app-footer">
+                <div className="app-footer">
                     <span>© 2024 Jadetimes Media LLC. All rights reserved.</span>
                 </div>
             </div>
@@ -165,6 +168,7 @@ const ManageStaff = () => {
     </div>
 
 </main>
+ </>
   )
 }
 

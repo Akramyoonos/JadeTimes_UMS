@@ -2,13 +2,19 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import '../css/main.css';
-import '../pages/AdminLogin.css'
-import "../Admin/adminSideBar";
+import '../Login-pages/AdminLogin.css'
+import "./adminSideBar";
+import AdminSideBar from './adminSideBar';
+import AdminAppHeader from "../Admin/AdminAppHeader";
 
 const AdminPanel = () => {
   return (
     
-    <main className="backgroundColorChange">
+    <>    
+    <AdminSideBar/>
+    <AdminAppHeader/>
+    
+    <main className="backgroundColorChange">   
 
 
     <div className="page-wrapper">
@@ -31,7 +37,7 @@ const AdminPanel = () => {
                     <ol className="breadcrumb d-none d-lg-flex align-items-center">
                         <li className="breadcrumb-item">
                             <i className="bi bi-house text-dark"></i>
-                            <a href="adminPanel.php">Home</a>
+                            <a href="/AdminPanel">Home</a>
                         </li>
                         <li className="breadcrumb-item" aria-current="page">Dashboard</li>
                     </ol>
@@ -104,28 +110,30 @@ const AdminPanel = () => {
                                         <div className="col-6">
                                             <div className="card mb-4 bg-success">
                                                 <div className="card-body d-flex align-items-center py-4">
-                                                    <table className="w-100 text-center">
-                                                        <tr>
-                                                            <td><span className="m-0 text-white smallText">Marked</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><h2 className="m-0 text-white number" id="count5">95</h2></td>
-                                                        </tr>
-                                                    </table>
+                                                   <table className="w-100 text-center">
+                                <tbody><tr>
+                                    <td><span className="m-0 text-white smallText">Marked</span></td>
+                                       </tr>
+                                        <tr>
+                                    <td><h2 className="m-0 text-white number" id="count5">95</h2></td>
+                                         </tr>
+                                </tbody></table>
+
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-6">
                                             <div className="card mb-4 backGroundRed">
                                                 <div className="card-body d-flex align-items-center py-4">
-                                                    <table className="w-100 text-center">
-                                                        <tr>
-                                                            <td><span className="m-0 text-white smallText">Not Marked</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><h2 className="m-0 text-black number" id="count6">5</h2></td>
-                                                        </tr>
-                                                    </table>
+                                        <table className="w-100 text-center">
+                                            <tbody><tr>
+                                            <td><span className="m-0 text-white smallText">Not Marked</span></td>
+                                             </tr>
+                                             <tr>
+                                           <td><h2 className="m-0 text-black number" id="count6">5</h2></td>
+                                           </tr>
+                                        </tbody></table>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -253,7 +261,7 @@ const AdminPanel = () => {
       
     </div>
 </main>
-
+</>
   )
 }
 

@@ -1,52 +1,58 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "../Login-pages/UserLogin.css";
+import "../css/main.css";
+import Usersidebar from '../User/Usersidebar';
+import UserAppHeader from '../User/UserAppHeader';
+
 
 const Reports = () => {
   return (
-    <main class="backgroundColorChange">
-    <div class="page-wrapper">
-        <div class="main-container">
-            <div class="sidebar-wrapper">
+    <>  
+    <Usersidebar/>
+    <UserAppHeader/>
+    <main className="backgroundColorChange">
+    <div className="page-wrapper">
+        <div className="main-container">
+            <div className="sidebar-wrapper">
                 
             </div>
-            <div class="app-container">
-                <div class="app-header">
+            <div className="app-container">
+                <div className="app-header">
                  
                 </div>
-                <div class="app-hero-header d-flex align-items-start">
-                    <ol class="breadcrumb d-none d-lg-flex align-items-center">
-                        <li class="breadcrumb-item">
-                            <i class="bi bi-house text-dark"></i>
-                            <a href="userDashBoard.php">Home</a>
+                <div className="app-hero-header d-flex align-items-start">
+                    <ol className="breadcrumb d-none d-lg-flex align-items-center">
+                        <li className="breadcrumb-item">
+                            <i className="bi bi-house text-dark"></i>
+                            <a href="/UserDashBoard">Home</a>
                         </li>
-                        <li class="breadcrumb-item" aria-current="page">Report</li>
+                        <li className="breadcrumb-item" aria-current="page">Report</li>
                     </ol>
                 </div>
-                <div class="app-body">
-                    <div class="row">
-                        <div class="col-xxl-12">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-xxl-12">
-                                            <div class="card mb-4">
-                                                <div class="card-header">
-                                                    <h5 class="card-title">Report</h5>
+                <div className="app-body">
+                    <div className="row">
+                        <div className="col-xxl-12">
+                            <div className="card mb-4">
+                                <div className="card-body">
+                                    <div className="row">
+                                        <div className="col-xxl-12">
+                                            <div className="card mb-4">
+                                                <div className="card-header">
+                                                    <h5 className="card-title">Report</h5>
                                                 </div>
-                                                <div class="card-body">
-                                                    <div class="row" aria-disabled="">
-                                                        <div class="col-12 alert alert-danger d-none" id="infoMessage" role="alert">
+                                                <div className="card-body">
+                                                    <div className="row" aria-disabled="">
+                                                        <div className="col-12 alert alert-danger d-none" id="infoMessage" role="alert">
                                                         </div>
-                                                        <div class="col-sm-6 col-12">
-                                                            <div class="mb-3">
-                                                                <label class="form-label"></label>
-                                                                <textarea class="form-control removeCorner" id="title" placeholder="Describe the condition" rows="5"></textarea>
+                                                        <div className="col-sm-6 col-12">
+                                                            <div className="mb-3">
+                                                                <label className="form-label"></label>
+                                                                <textarea className="form-control removeCorner" id="title" placeholder="Describe the condition" rows="5"></textarea>
                                                             </div>
-                                                            <div class="d-flex gap-2 justify-content-center">
-                                                                <button type="button" onclick="addNewReport()" class="btn btn-dark backgroundColorChange removeCorner">
+                                                            <div className="d-flex gap-2 justify-content-center">
+                                                                <button type="button"  className="btn btn-dark backgroundColorChange removeCorner">
                                                                     Report
                                                                 </button>
                                                             </div>
@@ -61,14 +67,15 @@ const Reports = () => {
                         </div>
                     </div>
                 </div>
-                <div class="app-footer">
+                <div className="app-footer">
                     <span>© 2024 Jadetimes Media LLC. All rights reserved.</span>
                 </div>
             </div>
         </div>
     </div>
 </main>
+</>
   )
 }
 
-export default Reports
+export default Reports;

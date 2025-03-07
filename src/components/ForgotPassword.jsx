@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '../css/main.css';
-import '../css/boostrap.css'
-import '../pages/UserLogin.css'
-import '../pages/AdminLogin'
+import '../Login-pages/UserLogin.css'
+import '../Login-pages/AdminLogin'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'bootstrap-icons/font/bootstrap-icons.css';

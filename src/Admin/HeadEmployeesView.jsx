@@ -1,11 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Usersidebar from '../User/Usersidebar';
+import UserAppHeader from '../User/UserAppHeader';
 
 const HeadEmployeesView = () => {
   return (
+    <>  
+    <Usersidebar/>
+    <UserAppHeader/>
     <main class="backgroundColorChange">
    
     <div class="page-wrapper">
@@ -63,6 +66,7 @@ const HeadEmployeesView = () => {
 
 
 </main>
+</>
   )
 }
 

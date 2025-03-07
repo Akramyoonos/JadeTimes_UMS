@@ -1,11 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Usersidebar from '../User/Usersidebar';
+import UserAppHeader from '../User/UserAppHeader';
 
 const HeadAttendence = () => {
   return (
+    <>  
+    <Usersidebar/>
+    <UserAppHeader/>
     <main class="backgroundColorChange" onload="loadUserAttendanceHead(0)">
     
     <div class="page-wrapper">
@@ -191,6 +194,7 @@ const HeadAttendence = () => {
 
 
 </main>
+</>
   )
 }
 

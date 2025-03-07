@@ -3,8 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../css/boostrap.css";
 import "../css/main.css";
-import "../pages/UserLogin.css";
-import Usersidebar from "./Usersidebar";
+import "../Login-pages/UserLogin.css";
+import Usersidebar from '../User/Usersidebar';
 
 const UserAppHeader = () => {
   return (

@@ -2,11 +2,17 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import '../css/main.css';
-import '../pages/AdminLogin.css'
+import '../Login-pages/AdminLogin.css';
 import "../Admin/adminSideBar";
+import Usersidebar from '../User/Usersidebar';
+import UserAppHeader from '../User/UserAppHeader';
 
 const ManageHeadLeaves = () => {
   return (
+    <> 
+    <Usersidebar/>
+    <UserAppHeader/>
+   
     <main class="backgroundColorChange" onload="loadUserLeaves(0)">
     <div class="page-wrapper">
         <div class="main-container">
@@ -141,6 +147,7 @@ const ManageHeadLeaves = () => {
     </div>
 
 </main>
+</>
   )
 }
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import '../css/main.css';
-import '../css/boostrap.css'
-import '../pages/UserLogin.css'
+import '../Login-pages/UserLogin.css'
 import ForgotPassword from '../components/ForgotPassword'; 
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';

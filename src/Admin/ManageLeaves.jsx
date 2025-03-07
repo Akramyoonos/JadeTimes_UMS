@@ -2,191 +2,197 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import '../css/main.css';
-import '../pages/AdminLogin.css'
+import '../Login-pages/AdminLogin.css';
 import "../Admin/adminSideBar";
+import AdminSideBar from '../Admin/adminSideBar';
+import AdminAppHeader from './AdminAppHeader';
 
 const ManageLeaves = () => {
   return (
-    <main class="backgroundColorChange" onload="loadUserLeaves(0)">
-    <div class="page-wrapper">
-        <div class="main-container">
+    <>   
+    <AdminSideBar/>
+    <AdminAppHeader/>
+   
+    <main className="backgroundColorChange" >
+    <div className="page-wrapper">
+        <div className="main-container">
            
-            <div class="admin-sidebar">
+            <div className="admin-sidebar">
                 
             </div>
 
-            <div class="app-container">
+            <div className="app-container">
                
-                <div class="admin-app-header">
+                <div className="admin-app-header">
                     
                 </div>
 
              
-                <div class="app-hero-header d-flex align-items-start">
-                    <ol class="breadcrumb d-none d-lg-flex align-items-center">
-                        <li class="breadcrumb-item">
-                            <i class="bi bi-house text-dark"></i>
-                            <a href="adminPanel.php">Home</a>
+                <div className="app-hero-header d-flex align-items-start">
+                    <ol className="breadcrumb d-none d-lg-flex align-items-center">
+                        <li className="breadcrumb-item">
+                            <i className="bi bi-house text-dark"></i>
+                            <a href="/AdminPanel">Home</a>
                         </li>
-                        <li class="breadcrumb-item" aria-current="page">Manage Leaves</li>
+                        <li className="breadcrumb-item" aria-current="page">Manage Leaves</li>
                     </ol>
                 </div>
 
              
-                <div class="app-body" id="cbody">
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="d-inline-flex gap-1">
-                                <button type="button" class="btn btn-dark backgroundColorChange removeCorner" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    <i class="bi bi-calendar2-plus"></i>
+                <div className="app-body" id="cbody">
+                    <div className="row">
+                        <div className="col-12">
+                            <p className="d-inline-flex gap-1">
+                                <button type="button" className="btn btn-dark backgroundColorChange removeCorner" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <i className="bi bi-calendar2-plus"></i>
                                 </button>
                             </p>
                         </div>
                     </div>
 
                   
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Add a Leave</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div className="modal-dialog">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h5 className="modal-title" id="staticBackdropLabel">Add a Leave</h5>
+                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="alert alert-danger d-none" id="attendanceinfoMessage" role="alert"></div>
+                                <div className="modal-body">
+                                    <div className="row">
+                                        <div className="col-12">
+                                            <div className="alert alert-danger d-none" id="attendanceinfoMessage" role="alert"></div>
                                         </div>
-                                        <div class="col-12">
-                                            <div class="mb-3">
-                                                <label class="form-label">Name</label><label class="colorRed ms-3 fs-6">*</label>
-                                                <select class="form-select removeCorner" id="adduser">
-                                                    <option value="0">Select user</option>
+                                        <div className="col-12">
+                                            <div className="mb-3">
+                                                <label className="form-label">Name</label><label className="colorRed ms-3 fs-6">*</label>
+                                                <select className="form-select removeCorner" id="adduser">
+                                                    <option >Select user</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <div class="mb-3">
-                                                <label class="form-label">Leave Type</label>
-                                                <select class="form-select removeCorner" id="addtype">
-                                                    <option value="1">Emergency</option>
-                                                    <option value="2">Normal</option>
-                                                    <option value="3">Special Leave</option>
+                                        <div className="col-12">
+                                            <div className="mb-3">
+                                                <label className="form-label">Leave Type</label>
+                                                <select className="form-select removeCorner" id="addtype">
+                                                    <option >Emergency</option>
+                                                    <option >Normal</option>
+                                                    <option >Special Leave</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <div class="mb-3">
-                                                <label class="form-label">Date</label>
-                                                <input type="date" id="addDate" class="form-control removeCorner" value="" />
+                                        <div className="col-12">
+                                            <div className="mb-3">
+                                                <label className="form-label">Date</label>
+                                                <input type="date" id="addDate" className="form-control removeCorner" />
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <div class="mb-3">
-                                                <label class="form-label">Reason</label>
-                                                <textarea class="form-control removeCorner" id="addreason" placeholder="Reason" rows="4"></textarea>
+                                        <div className="col-12">
+                                            <div className="mb-3">
+                                                <label className="form-label">Reason</label>
+                                                <textarea className="form-control removeCorner" id="addreason" placeholder="Reason" rows="4"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-dark backgroundColorChange" onclick="adminAddLeave()">Submit</button>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" className="btn btn-dark backgroundColorChange" >Submit</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-4 col-12">
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-12"><label class="form-label fs-6">Search By :</label></div>
+                    <div className="row">
+                        <div className="col-lg-3 col-sm-4 col-12">
+                            <div className="mb-3">
+                                <div className="row">
+                                    <div className="col-12"><label className="form-label fs-6">Search By :</label></div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-4 col-12 text-center">
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-3 text-end"><label class="form-label smallText">Name -</label></div>
-                                    <div class="col-9">
-                                        <select id="select-state" class="form-select removeCorner smallText" onchange="loadUserLeaves(1)">
-                                            <option value="0">All users</option>
+                    <div className="row">
+                        <div className="col-lg-3 col-sm-4 col-12 text-center">
+                            <div className="mb-3">
+                                <div className="row">
+                                    <div className="col-3 text-end"><label className="form-label smallText">Name -</label></div>
+                                    <div className="col-9">
+                                        <select id="select-state" className="form-select removeCorner smallText" >
+                                            <option >All users</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-sm-4 col-12 text-center">
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-3 text-end"><label class="form-label smallText">From Date -</label></div>
-                                    <div class="col-9"><input type="date" id="from" class="form-control removeCorner smallText" placeholder="Search by first name" value="" oninput="loadUserLeaves(1)" /></div>
+                        <div className="col-lg-3 col-sm-4 col-12 text-center">
+                            <div className="mb-3">
+                                <div className="row">
+                                    <div className="col-3 text-end"><label className="form-label smallText">From Date -</label></div>
+                                    <div className="col-9"><input type="date" id="from" className="form-control removeCorner smallText" placeholder="Search by first name"  /></div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-sm-4 col-12 text-center">
-                            <div class="">
-                                <div class="row">
-                                    <div class="col-3 text-end"><label class="form-label smallText">To Date -</label></div>
-                                    <div class="col-9"><input type="date" id="to" class="form-control removeCorner smallText" placeholder="Search by user position" oninput="loadUserLeaves(1)" value="" /></div>
+                        <div className="col-lg-3 col-sm-4 col-12 text-center">
+                            <div className="">
+                                <div className="row">
+                                    <div className="col-3 text-end"><label className="form-label smallText">To Date -</label></div>
+                                    <div className="col-9"><input type="date" id="to" className="form-control removeCorner smallText" placeholder="Search by user position" /></div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-sm-4 col-12 text-center mt-lg-0 mt-3">
-                            <div class="">
-                                <div class="row">
-                                    <div class="col-3 text-end"><label class="form-label smallText">Order By</label></div>
-                                    <div class="col-9">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="btnradio" id="exampleRadios1" value="ASC" onchange="loadUserLeaves(1)"/>
-                                            <label class="form-check-label smallText" for="exampleRadios1">Date ASC</label>
+                        <div className="col-lg-3 col-sm-4 col-12 text-center mt-lg-0 mt-3">
+                            <div className="">
+                                <div className="row">
+                                    <div className="col-3 text-end"><label className="form-label smallText">Order By</label></div>
+                                    <div className="col-9">
+                                        <div className="form-check">
+                                            <input className="form-check-input" type="radio" name="btnradio" id="exampleRadios1"  />
+                                            <label className="form-check-label smallText" htmlFor="exampleRadios1">Date ASC</label>
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="btnradio" id="exampleRadios2" value="DESC" checked onchange="loadUserLeaves(1)"/>
-                                            <label class="form-check-label smallText text-start" for="exampleRadios2">Date DESC</label>
+                                        <div className="form-check">
+                                            <input className="form-check-input" type="radio" name="btnradio" id="exampleRadios2" checked />
+                                            <label className="form-check-label smallText text-start" htmlFor="exampleRadios2">Date DESC</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-12 text-center mt-lg-0 mt-3">
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-3 text-end"><label class="form-label smallText">Leave Status -</label></div>
-                                    <div class="col-9">
-                                        <select id="status" class="form-select removeCorner smallText" onchange="loadUserLeaves(1)">
-                                            <option value="0">All</option>
+                        <div className="col-lg-6 col-12 text-center mt-lg-0 mt-3">
+                            <div className="mb-3">
+                                <div className="row">
+                                    <div className="col-3 text-end"><label className="form-label smallText">Leave Status -</label></div>
+                                    <div className="col-9">
+                                        <select id="status" className="form-select removeCorner smallText" >
+                                            <option >All</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-12 col-lg-6 text-center">
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-12 text-lg-start text-end">
-                                        <button class="btn btn-danger removeCorner" onclick="clearSearchDataLeave()"><i class="bi bi-x"></i></button>
+                        <div className="col-12 col-lg-6 text-center">
+                            <div className="mb-3">
+                                <div className="row">
+                                    <div className="col-12 text-lg-start text-end">
+                                        <button className="btn btn-danger removeCorner" ><i className="bi bi-x"></i></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-xxl-12">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="table-responsive">
-                                        <table class="table align-middle table-hover m-0">
+                    <div className="col-xxl-12">
+                        <div className="card mb-4">
+                            <div className="card-body">
+                                <div className="row">
+                                    <div className="table-responsive">
+                                        <table className="table align-middle table-hover m-0">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">No</th>
@@ -201,11 +207,11 @@ const ManageLeaves = () => {
                                         </table>
                                     </div>
                                 </div>
-                                <div class="row mt-3">
-                                    <div class="col-12 text-center">
-                                        <div class="card mb-4">
-                                            <div class="card-body">
-                                                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" id="pagicontainer"></div>
+                                <div className="row mt-3">
+                                    <div className="col-12 text-center">
+                                        <div className="card mb-4">
+                                            <div className="card-body">
+                                                <div className="btn-group" role="group" aria-label="Basic checkbox toggle button group" id="pagicontainer"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +222,7 @@ const ManageLeaves = () => {
                 </div>
 
              
-                <div class="app-footer">
+                <div className="app-footer">
                     <span>© 2024 Jadetimes Media LLC. All rights reserved.</span>
                 </div>
             </div>
@@ -224,6 +230,7 @@ const ManageLeaves = () => {
     </div>
 
 </main>
+</>
   )
 }
 

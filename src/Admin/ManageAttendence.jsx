@@ -2,119 +2,127 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import '../css/main.css';
-import '../pages/AdminLogin.css'
+import '../Login-pages/AdminLogin.css';
+import '../Login-pages/UserLogin.css';
 import "../Admin/adminSideBar";
+import AdminSideBar from '../Admin/adminSideBar';
+import AdminAppHeader from './AdminAppHeader';
 
 const ManageAttendence = () => {
   return (
-    <main class="backgroundColorChange" onload="loadUserAttendance(0)">
-	<div class="page-wrapper">
-		<div class="main-container">
+    <>  
+	<AdminSideBar/>
+	<AdminAppHeader/>
+    <main className="backgroundColorChange" >
+	<div className="page-wrapper">
+		<div className="main-container">
 			
 
-			<div class="app-container">
+			<div className="app-container">
 				
 
-				<div class="app-hero-header d-flex align-items-start">
-					<ol class="breadcrumb d-none d-lg-flex align-items-center">
-						<li class="breadcrumb-item">
-							<i class="bi bi-house text-dark"></i>
-							<a href="adminPanel.php">Home</a>
+				<div className="app-hero-header d-flex align-items-start">
+					<ol className="breadcrumb d-none d-lg-flex align-items-center">
+						<li className="breadcrumb-item">
+							<i className="bi bi-house text-dark"></i>
+							<a href="/AdminPanel">Home</a>
 						</li>
-						<li class="breadcrumb-item">Manage Attendance</li>
+						<li className="breadcrumb-item">Manage Attendance</li>
 					</ol>
 				</div>
 
-				<div class="app-body" id="cbody">
-					<div class="row">
-						<div class="col-12">
-							<p class="d-inline-flex gap-1">
-								<button type="button" class="btn btn-dark backgroundColorChange removeCorner" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-									<i class="bi bi-building-add"></i>
+				<div className="app-body" id="cbody">
+					<div className="row">
+						<div className="col-12">
+							<p className="d-inline-flex gap-1">
+								<button type="button" className="btn btn-dark backgroundColorChange removeCorner" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+									<i className="bi bi-building-add"></i>
 								</button>
 							</p>
 						</div>
 
-						<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title">Add Past Attendance</h5>
-										<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+						<div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" tabIndex="-1">
+							<div className="modal-dialog">
+								<div className="modal-content">
+									<div className="modal-header">
+										<h5 className="modal-title">Add Past Attendance</h5>
+										<button type="button" className="btn-close" data-bs-dismiss="modal"></button>
 									</div>
-									<div class="modal-body">
-										<div class="row">
-											<div class="col-12">
-												<div class="alert alert-danger d-none" id="attendanceinfoMessage"></div>
+									<div className="modal-body">
+										<div className="row">
+											<div className="col-12">
+												<div className="alert alert-danger d-none" id="attendanceinfoMessage"></div>
 											</div>
-											<div class="col-12">
-												<div class="mb-3">
-													<label class="form-label">Name</label>
-													<label class="colorRed ms-3 fs-6">*</label>
-													<select class="form-select removeCorner" id="adduser">
+											<div className="col-12">
+												<div className="mb-3">
+													<label className="form-label">Name</label>
+													<label className="colorRed ms-3 fs-6">*</label>
+													<select className="form-select removeCorner" id="adduser">
 														<option value="0">Select user</option>
 													</select>
 												</div>
 											</div>
-											<div class="col-12">
-												<div class="mb-3">
-													<label class="form-label">Date</label>
-													<input type="date" id="addDate" class="form-control removeCorner"/>
+											<div className="col-12">
+												<div className="mb-3">
+													<label className="form-label">Date</label>
+													<input type="date" id="addDate" className="form-control removeCorner"/>
 												</div>
 											</div>
-											<div class="col-12">
-												<div class="mb-3">
-													<label class="form-label">Completed Tasks</label>
-													<textarea class="form-control removeCorner" id="addtask" rows="4"></textarea>
+											<div className="col-12">
+												<div className="mb-3">
+													<label className="form-label">Completed Tasks</label>
+													<textarea className="form-control removeCorner" id="addtask" rows="4"></textarea>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-										<button type="button" class="btn btn-dark backgroundColorChange" onclick="adminMarkUserAttendance()">Submit</button>
+									<div className="modal-footer">
+										<button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+										<button type="button" className="btn btn-dark backgroundColorChange" >Submit</button>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-sm-4 offset-sm-4">
-							<div class="row">
-								<div class="col-6">
-									<div class="card mb-4 bg-success">
-										<div class="card-body d-flex align-items-center">
-											<table class="w-100 text-center">
-												<tr>
-													<td>
-														<span class="smallText text-white">Marked</span>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<h2 class="m-0 text-white number" id="markedCount">0</h2>
-													</td>
-												</tr>
-											</table>
+					<div className="row">
+						<div className="col-sm-4 offset-sm-4">
+							<div className="row">
+								<div className="col-6">
+									<div className="card mb-4 bg-success">
+										<div className="card-body d-flex align-items-center">
+<table className="w-100 text-center">
+  <tbody><tr>
+      <td>
+        <span className="smallText text-white">Marked</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2 className="m-0 text-white number" id="markedCount">0</h2>
+      </td>
+    </tr>
+  </tbody></table>
+
 										</div>
 									</div>
 								</div>
-								<div class="col-6">
-									<div class="card mb-4 backGroundRed">
-										<div class="card-body d-flex align-items-center">
-											<table class="w-100 text-center">
-												<tr>
-													<td>
-														<span class="smallText text-white">Not Marked</span>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<h2 class="m-0 text-white number" id="notMarkedCount">0</h2>
-													</td>
-												</tr>
-											</table>
+								<div className="col-6">
+									<div className="card mb-4 backGroundRed">
+										<div className="card-body d-flex align-items-center">
+<table className="w-100 text-center">
+  <tbody><tr>
+      <td>
+        <span className="smallText text-white">Not Marked</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2 className="m-0 text-white number" id="notMarkedCount">0</h2>
+      </td>
+    </tr>
+  </tbody></table>
+
 										</div>
 									</div>
 								</div>
@@ -122,27 +130,27 @@ const ManageAttendence = () => {
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-lg-3 col-sm-4 col-12">
-							<div class="mb-3">
-								<div class="row">
-									<div class="col-12">
-										<label class="form-label fs-6">Search By :</label>
+					<div className="row">
+						<div className="col-lg-3 col-sm-4 col-12">
+							<div className="mb-3">
+								<div className="row">
+									<div className="col-12">
+										<label className="form-label fs-6">Search By :</label>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-lg-3 col-sm-4 col-12 text-center">
-							<div class="mb-3">
-								<div class="row">
-									<div class="col-3 text-end">
-										<label class="form-label smallText">Name -</label>
+					<div className="row">
+						<div className="col-lg-3 col-sm-4 col-12 text-center">
+							<div className="mb-3">
+								<div className="row">
+									<div className="col-3 text-end">
+										<label className="form-label smallText">Name -</label>
 									</div>
-									<div class="col-9">
-										<select id="select-state" class="form-select removeCorner smallText" onchange="loadUserAttendance(1)">
+									<div className="col-9">
+										<select id="select-state" className="form-select removeCorner smallText" >
 											<option value="0">All users</option>
 										</select>
 									</div>
@@ -150,15 +158,14 @@ const ManageAttendence = () => {
 							</div>
 						</div>
 
-						<div class="col-lg-3 col-sm-4 col-12 text-center">
-							<div class="mb-3">
-								<div class="row">
-									<div class="col-3 text-end">
-										<label class="form-label smallText">Status</label>
+						<div className="col-lg-3 col-sm-4 col-12 text-center">
+							<div className="mb-3">
+								<div className="row">
+									<div className="col-3 text-end">
+										<label className="form-label smallText">Status</label>
 									</div>
-									<div class="col-9">
-										<select id="markStatus" class="form-select removeCorner smallText" onchange="loadUserAttendance(1)">
-											<option value="1" selected>All</option>
+									<div className="col-9">
+										<select id="markStatus" className="form-select removeCorner smallText" >
 											<option value="2">Marked</option>
 										</select>
 									</div>
@@ -166,58 +173,58 @@ const ManageAttendence = () => {
 							</div>
 						</div>
 
-						<div class="col-lg-3 col-sm-4 col-12 text-center">
-							<div class="mb-3">
-								<div class="row">
-									<div class="col-3 text-end">
-										<label class="form-label smallText">From Date -</label>
+						<div className="col-lg-3 col-sm-4 col-12 text-center">
+							<div className="mb-3">
+								<div className="row">
+									<div className="col-3 text-end">
+										<label className="form-label smallText">From Date -</label>
 									</div>
-									<div class="col-9">
-										<input type="date" id="from" class="form-control removeCorner smallText" oninput="loadUserAttendance(1)"/>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-sm-4 col-12 text-center">
-							<div class="">
-								<div class="row">
-									<div class="col-3 text-end">
-										<label class="form-label smallText">To Date -</label>
-									</div>
-									<div class="col-9">
-										<input type="date" id="to" class="form-control removeCorner smallText" oninput="loadUserAttendance(1)"/>
+									<div className="col-9">
+										<input type="date" id="from" className="form-control removeCorner smallText" />
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-lg-3 col-sm-4 col-12 text-center">
-							<div class="">
-								<div class="row">
-									<div class="col-3 text-end">
-										<label class="form-label smallText">Order By</label>
+						<div className="col-lg-3 col-sm-4 col-12 text-center">
+							<div className="">
+								<div className="row">
+									<div className="col-3 text-end">
+										<label className="form-label smallText">To Date -</label>
 									</div>
-									<div class="col-9">
-										<div class="form-check">
-											<input class="form-check-input" type="radio" name="btnradio" id="exampleRadios1" value="ASC" onchange="loadUserAttendance(1)"/>
-											<label class="form-check-label smallText">Date ASC</label>
+									<div className="col-9">
+										<input type="date" id="to" className="form-control removeCorner smallText" />
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div className="col-lg-3 col-sm-4 col-12 text-center">
+							<div className="">
+								<div className="row">
+									<div className="col-3 text-end">
+										<label className="form-label smallText">Order By</label>
+									</div>
+									<div className="col-9">
+										<div className="form-check">
+											<input className="form-check-input" type="radio" name="btnradio" id="exampleRadios1" value="ASC" />
+											<label className="form-check-label smallText">Date ASC</label>
 										</div>
-										<div class="form-check">
-											<input class="form-check-input" type="radio" name="btnradio" id="exampleRadios2" value="DESC" checked onchange="loadUserAttendance(1)"/>
-											<label class="form-check-label smallText">Date DESC</label>
+										<div className="form-check">
+											<input className="form-check-input" type="radio" name="btnradio" id="exampleRadios2" value="DESC" checked />
+											<label className="form-check-label smallText">Date DESC</label>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-12 text-center">
-							<div class="mb-3">
-								<div class="row">
-									<div class="col-12 text-end">
-										<button class="btn btn-danger removeCorner" onclick="clearSearchDataAttendance()">
-											<i class="bi bi-x"></i>
+						<div className="col-12 text-center">
+							<div className="mb-3">
+								<div className="row">
+									<div className="col-12 text-end">
+										<button className="btn btn-danger removeCorner" >
+											<i className="bi bi-x"></i>
 										</button>
 									</div>
 								</div>
@@ -225,12 +232,12 @@ const ManageAttendence = () => {
 						</div>
 					</div>
 
-					<div class="col-xxl-12">
-						<div class="card mb-4">
-							<div class="card-body">
-								<div class="row">
-									<div class="table-responsive">
-										<table class="table align-middle table-hover m-0">
+					<div className="col-xxl-12">
+						<div className="card mb-4">
+							<div className="card-body">
+								<div className="row">
+									<div className="table-responsive">
+										<table className="table align-middle table-hover m-0">
 											<thead>
 												<tr>
 													<th>No</th>
@@ -245,11 +252,11 @@ const ManageAttendence = () => {
 										</table>
 									</div>
 								</div>
-								<div class="row mt-3">
-									<div class="col-12 text-center">
-										<div class="card mb-4">
-											<div class="card-body">
-												<div class="btn-group" role="group" id="pagicontainer"></div>
+								<div className="row mt-3">
+									<div className="col-12 text-center">
+										<div className="card mb-4">
+											<div className="card-body">
+												<div className="btn-group" role="group" id="pagicontainer"></div>
 											</div>
 										</div>
 									</div>
@@ -259,7 +266,7 @@ const ManageAttendence = () => {
 					</div>
 				</div>
 
-				<div class="app-footer">
+				<div className="app-footer">
 					<span>© 2024 Jadetimes Media LLC. All rights reserved.</span>
 				</div>
 			</div>
@@ -268,6 +275,7 @@ const ManageAttendence = () => {
 
 =
 </main>
+</>
   )
 }
 

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -17,7 +15,7 @@ const AdminProfile = () => {
                     <ol class="breadcrumb d-none d-lg-flex align-items-center">
                         <li class="breadcrumb-item">
                             <i class="bi bi-house text-dark"></i>
-                            <a href="adminPanel.php">Home</a>
+                            <a href="/AdminPanel">Home</a>
                         </li>
                         <li class="breadcrumb-item">Profile</li>
                     </ol>

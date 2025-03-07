@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import UserLogin from "../pages/UserLogin";
+import UserLogin from '../Login-pages/UserLogin.jsx';
+import AdminLogin from '../Login-pages/AdminLogin.jsx';
 import '../css/main.css'
-import '../pages/UserLogin.css'
+import '../Login-pages/UserLogin.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const First = () => {

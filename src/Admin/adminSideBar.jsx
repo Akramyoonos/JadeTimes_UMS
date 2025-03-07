@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -10,7 +8,7 @@ const AdminSideBar = () => {
 <nav id="sidebar" className="sidebar-wrapper backgroundColorChange">
 
     <div className="app-brand p-4 mt-lg-0 mt-5">
-        <a href="adminPanel.php">
+        <a href="/AdminPanel">
             <img src="/src/assets/img/darkLogo.png" style={{ height: "60px",width: "auto"}} alt="Bootstrap Gallery" />
         </a>
     </div>
@@ -19,14 +17,14 @@ const AdminSideBar = () => {
         <ul className="sidebar-menu">
      
             <li className="active current-page">
-                <a href="adminPanel.php">
+                <a href="/AdminPanel">
                     <i className="bi bi-pie-chart"></i>
                     <span className="menu-text">Dashboard</span>
                 </a>
             </li>
 
             <li className="">
-                <a href="ManageUser.php">
+                <a href="/ManageUser">
                     <i className="bi bi-person-video2"></i>
                     <span className="menu-text">Manage Users</span>
                 </a>
@@ -34,14 +32,14 @@ const AdminSideBar = () => {
 
             
             <li className="">
-                <a href="manageAttendence.php">
+                <a href="/ManageAttendence">
                     <i className="bi bi-building-fill-gear"></i>
                     <span className="menu-text">Manage Attendance</span>
                 </a>
             </li>
 
             <li className="">
-                <a href="manageArticles.php">
+                <a href="/ManageArticles">
                     <i className="bi bi-journal-bookmark"></i>
                     <span className="menu-text">Articles</span>
                 </a>
@@ -49,14 +47,14 @@ const AdminSideBar = () => {
 
           
             <li className="">
-                <a href="manageLeaves.php">
+                <a href="/ManageLeaves">
                     <i className="bi bi-calendar2-date"></i>
                     <span className="menu-text">Manage Leaves</span>
                 </a>
             </li>
 
             <li className="">
-                <a href="manageReports.php">
+                <a href="/ManageReports">
                     <i className="bi bi-flag"></i>
                     <span className="menu-text">
                         Manage Reports
@@ -68,7 +66,7 @@ const AdminSideBar = () => {
 
           
             <li className="">
-                <a href="manageStaff.php">
+                <a href="/ManageStaff">
                     <i className="bi bi-bar-chart-steps"></i>
                     <span className="menu-text">Permanent Staff</span>
                 </a>
@@ -76,7 +74,7 @@ const AdminSideBar = () => {
 
          
             <li className="">
-                <a href="managePositions.php">
+                <a href="/ManagePositions">
                     <i className="bi bi-bar-chart-steps"></i>
                     <span className="menu-text">Manage Positions</span>
                 </a>
@@ -88,21 +86,21 @@ const AdminSideBar = () => {
 
          
             <li className="">
-                <a href="adminAttendence.php">
+                <a href="/AdminAttendence">
                     <i className="bi bi-building"></i>
                     <span className="menu-text">My Attendance</span>
                 </a>
             </li>
 
             <li className="">
-                <a href="adminLeaves.php">
+                <a href="/AdminLeaves">
                     <i className="bi bi-calendar2-x"></i>
                     <span className="menu-text">My Leaves</span>
                 </a>
             </li>
 
             <li className="">
-                <a href="manageFeedback.php">
+                <a href="/ManageFeedback">
                     <i className="bi bi-building"></i>
                     <span className="menu-text">Manage Feedback</span>
                 </a>
@@ -110,7 +108,7 @@ const AdminSideBar = () => {
 
           
             <li className="">
-                <a href="adminProfile.php">
+                <a href="/">
                     <i className="bi bi-person-square"></i>
                     <span className="menu-text">My Profile</span>
                 </a>

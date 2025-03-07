@@ -2,7 +2,7 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import '../css/main.css';
-import '../pages/AdminLogin.css'
+import '../Login-pages/AdminLogin.css';
 import "../Admin/adminSideBar";
 
 const ManageFeedback = () => {
@@ -19,7 +19,7 @@ const ManageFeedback = () => {
 					<ol class="breadcrumb d-none d-lg-flex align-items-center">
 						<li class="breadcrumb-item">
 							<i class="bi bi-house text-dark"></i>
-							<a href="adminPanel.php">Home</a>
+							<a href="/AdminPanel">Home</a>
 						</li>
 						<li class="breadcrumb-item">Manage Feedback</li>
 					</ol>

@@ -3,12 +3,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../css/boostrap.css";
 import "../css/main.css";
-import "../pages/UserLogin.css";
-import Usersidebar from "./Usersidebar";
+import "../Login-pages/UserLogin.css";
+import Usersidebar from '../User/Usersidebar';
+import UserAppHeader from "../User/UserAppHeader";
 
 
 const UserDashboard = () => {
   return (
+<> 
+    <Usersidebar/>
+    <UserAppHeader/>
 
 <main className="backgroundColorChange">
 
@@ -35,7 +39,7 @@ const UserDashboard = () => {
           <ol className="breadcrumb d-none d-lg-flex align-items-center">
             <li className="breadcrumb-item">
               <i className="bi bi-house text-black"></i>
-              <a href="userDashBoard.php">Home</a>
+              <a href="/UserDashBoard">Home</a>
             </li>
             <li className="breadcrumb-item" aria-current="page">Dashboard</li>
           </ol>
@@ -239,7 +243,7 @@ const UserDashboard = () => {
   </div>
 
 </main>
-
+</>
   );
 };
 

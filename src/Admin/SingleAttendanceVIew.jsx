@@ -1,68 +1,66 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const SingleAttendanceVIew = () => {
   return (
-    <main class="backgroundColorChange">
-    <div class="page-wrapper">
-        <div class="main-container">
-            <div class="sidebar-wrapper">
+    <main className="backgroundColorChange">
+    <div className="page-wrapper">
+        <div className="main-container">
+            <div className="sidebar-wrapper">
               
             </div>
-            <div class="app-container">
-                <div class="app-header">
+            <div className="app-container">
+                <div className="app-header">
                 
                 </div>
-                <div class="app-hero-header d-flex align-items-start">
-                    <ol class="breadcrumb d-none d-lg-flex align-items-center">
-                        <li class="breadcrumb-item">
-                            <i class="bi bi-house text-dark"></i>
+                <div className="app-hero-header d-flex align-items-start">
+                    <ol className="breadcrumb d-none d-lg-flex align-items-center">
+                        <li className="breadcrumb-item">
+                            <i className="bi bi-house text-dark"></i>
                             <a href="adminPanel.php">Home</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="manageAttendence.php">Manage Attendance</a></li>
-                        <li class="breadcrumb-item" aria-current="page">View Attendance</li>
+                        <li className="breadcrumb-item"><a href="manageAttendence.php">Manage Attendance</a></li>
+                        <li className="breadcrumb-item" aria-current="page">View Attendance</li>
                     </ol>
                 </div>
-                <div class="app-body">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6 col-12">
-                            <div class="card mb-4 rounded-5">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center flex-column">
-                                        <div class="mb-3">
-                                            <img src="assets/img/defaultProfileImage.png" class="img-6x rounded-circle" alt="" />
+                <div className="app-body">
+                    <div className="row">
+                        <div className="col-lg-4 col-sm-6 col-12">
+                            <div className="card mb-4 rounded-5">
+                                <div className="card-body">
+                                    <div className="d-flex align-items-center flex-column">
+                                        <div className="mb-3">
+                                            <img src="assets/img/defaultProfileImage.png" className="img-6x rounded-circle" alt="" />
                                         </div>
-                                        <h5 class="mb-3">John Doe</h5>
+                                        <h5 className="mb-3">John Doe</h5>
                                         <p>john.doe@example.com</p>
-                                        <div class="mb-3">
-                                            <span class="badge bg-danger">Department</span>
-                                            <span class="badge bg-info">Position</span>
+                                        <div className="mb-3">
+                                            <span className="badge bg-danger">Department</span>
+                                            <span className="badge bg-info">Position</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-6 col-12">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <div class="alert alert-danger d-none" id="infoMessage" role="alert">
+                        <div className="col-lg-8 col-sm-6 col-12">
+                            <div className="row">
+                                <div className="col-12">
+                                    <div className="row">
+                                        <div className="col-12 mb-3">
+                                            <div className="alert alert-danger d-none" id="infoMessage" role="alert">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="alert alert-success" role="alert">
-                                                <div class="mb-3">
-                                                    <i class="bi bi-check-circle fs-1 me-2 lh-1"></i>
+                                <div className="col-12">
+                                    <div className="card">
+                                        <div className="card-body">
+                                            <div className="alert alert-success" role="alert">
+                                                <div className="mb-3">
+                                                    <i className="bi bi-check-circle fs-1 me-2 lh-1"></i>
                                                 </div>
-                                                <h4 class="alert-heading">Task has Completed</h4>
+                                                <h4 className="alert-heading">Task has Completed</h4>
                                                 <p>Attendance Date = 2024-01-01</p>
                                                 <hr />
                                                 <p>Description of the task goes here.</p>
@@ -74,7 +72,7 @@ const SingleAttendanceVIew = () => {
                         </div>
                     </div>
                 </div>
-                <div class="app-footer">
+                <div className="app-footer">
                     <span>© 2024 Jadetimes Media LLC. All rights reserved.</span>
                 </div>
             </div>
